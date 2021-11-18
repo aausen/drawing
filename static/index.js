@@ -1,9 +1,11 @@
 'use strict';
+const canvas = document.getElementById("paint");
+const ctx = canvas.getContext("2d");
 
 function draw(){
-    const canvas = document.getElementById("paint");
+    // const canvas = document.getElementById("paint");
     if (canvas.getContext) {
-        const ctx = canvas.getContext("2d");
+        // const ctx = canvas.getContext("2d");
         
         const myCanvas = document.getElementById("myCanvas");
         let myCanvas_style = getComputedStyle(myCanvas);
@@ -24,13 +26,14 @@ function draw(){
 
         ctx.strokeStyle = 'red';
 
-        function getColor(color){
-            strokeStyle = color;
-        }
-
-        function getSize(size){
-            ctx.lineWidth = size;
-        }
+        getColor();
+        // function getColor(color){
+        //     ctx.strokeStyle = color;
+        // }
+        getSize();
+        // function getSize(size){
+        //     ctx.lineWidth = size;
+        // }
 
         canvas.addEventListener('mousedown', function(e) {
             ctx.beginPath();
@@ -56,7 +59,13 @@ function draw(){
 
 draw();
 
+function getColor(color){
+    ctx.strokeStyle = color;
+}
 
+function getSize(size){
+        ctx.lineWidth = size;
+    }
 
 // ctx.moveTo(0, 0);
 

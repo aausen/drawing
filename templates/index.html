@@ -12,6 +12,21 @@
         <div id="myCanvas">
             <canvas id="paint" width="500" height="250"></canvas>
         </div>
+
+        <div id="settings"> Colors 
+            <button onclick="getColor('blue')">Blue</button>
+            <button onclick="getColor('red')">Red</button>
+            <button onclick="getColor('green')">Green</button>
+            <button onclick="getColor('black')">Black</button>
+            <button onclick="getColor('white')">Eraser</button>
+        </div>
+        <div id="settings"> Brush Size
+            <button onclick="getSize('2')">Small</button>
+            <button onclick="getSize('5')">Medium</button>
+            <button onclick="getSize('10')">Large</button>
+            <button onclick="getSize('20')">XLarge</button>
+        </div>
+
         <script src="/static/index.js"></script>
     </body>
 </html>
