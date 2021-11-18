@@ -14,6 +14,8 @@ function draw(){
 
         let mouse = {x:0, y:0};
 
+        ctx.save();
+
     // refactor into another function for mouse recapture //
         canvas.addEventListener('mousemove', function(e){
             mouse.x = e.pageX - this.offsetLeft;
@@ -28,6 +30,7 @@ function draw(){
 
         getColor();
         getSize();
+        
         
 
         canvas.addEventListener('mousedown', function(e) {
@@ -63,6 +66,11 @@ function getColor(color){
 function getSize(size){
         ctx.lineWidth = size;
     }
+
+function clearAll(){
+    console.log("im getting called!")
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
 
 // ctx.moveTo(0, 0);
 
