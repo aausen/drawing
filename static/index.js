@@ -27,13 +27,8 @@ function draw(){
         ctx.strokeStyle = 'red';
 
         getColor();
-        // function getColor(color){
-        //     ctx.strokeStyle = color;
-        // }
         getSize();
-        // function getSize(size){
-        //     ctx.lineWidth = size;
-        // }
+        
 
         canvas.addEventListener('mousedown', function(e) {
             ctx.beginPath();
@@ -59,10 +54,12 @@ function draw(){
 
 draw();
 
+// Changes color of brush on canvas
 function getColor(color){
     ctx.strokeStyle = color;
 }
 
+// Changes size of brush on canvas
 function getSize(size){
         ctx.lineWidth = size;
     }
