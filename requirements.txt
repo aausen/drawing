@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 Usage:   
   pip3 <command> [options]
