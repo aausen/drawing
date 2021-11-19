@@ -16,8 +16,8 @@ class Gallery(db.Model):
     def __repr__(self):
         return f"Gallery img_id = {self.img_id}, img_name = {self.img_name}, img_tags = {self.img}"
 
-def connect_to_db(flask_app, db_uri="postgresql:///gallery", echo=True):
-    flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
+def connect_to_db(flask_app, db_uri=None):
+    flask_app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql:///gallery"
     flask_app.config['SQLALCHEMY_ECHO'] = echo
     flask_app.config['SQLALCHEMY_TRACK_MODIFCATIONS'] = False
 
