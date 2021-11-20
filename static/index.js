@@ -72,6 +72,12 @@ function clearAll(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
+function saveUrl(){
+    let dataUrl = canvas.toDataURL();
+    console.log(dataUrl);
+    return dataUrl;
+}
+
 // ctx.moveTo(0, 0);
 
 // ctx.lineTo(500, 250)
