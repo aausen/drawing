@@ -2,6 +2,7 @@
 
 from flask import Flask
 from flask.templating import render_template
+from flask_migrate import Migrate
 from jinja2 import StrictUndefined
 from model import Gallery, db, connect_to_db
 import os
