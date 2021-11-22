@@ -13,6 +13,8 @@ def create_app():
         SQLALCHEMY_DATABASE_URI = DATABASE_URL or "postgresql:///gallery",
         SQLALCHEMY_TRACK_MODIFICATIONS = False
     )
+
+    # Still not deploying, will continue working on fix here
    
     db.init_app(app)
     migrate.init_app(app, db)
