@@ -5,8 +5,7 @@ from flask_migrate import Migrate
 
 db = SQLAlchemy()
 migrate = Migrate()
-DATABASE_URL = 'postgresql://yjtkoscjsahdgv:c2729e0939d40f404ad2fd847493f356034a78f8deab6ab385b410d7db6abcfa@ec2-54-237-183-160.compute-1.amazonaws.com:5432/ddggfmqua6osbb'
-
+DATABASE_URL = os.environ['DATABASE_URL']
 def create_app():
     app = Flask(__name__)
     app.config.from_mapping(
