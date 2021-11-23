@@ -72,10 +72,10 @@ function clearAll(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-function saveUrl(){
-    let dataUrl = canvas.toDataURL();
-    console.log(dataUrl);
-    return dataUrl;
+function saveImage(){
+    const dataURI = canvas.toDataURL();
+    console.log(dataURI);
+    imageConverted.src = dataURI;
 }
 
 // ctx.moveTo(0, 0);
